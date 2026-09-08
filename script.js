@@ -28,14 +28,45 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 // CONTACT FORM
 
 const contactForm = document.getElementById("contactForm");
+const downloadResume = document.getElementById("downloadResume");
+
+downloadResume.addEventListener("click", async function(event) {
+    event.preventDefault();
+
+    try {
+        const response = await fetch(downloadResume.href);
+        if (!response.ok) {
+            throw new Error("Resume download failed");
+        }
+
+        const resumeBlob = await response.blob();
+        const downloadUrl = URL.createObjectURL(resumeBlob);
+        const downloadLink = document.createElement("a");
+        downloadLink.href = downloadUrl;
+        downloadLink.download = "Telvin-Resume.jpg";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        downloadLink.remove();
+        URL.revokeObjectURL(downloadUrl);
+    } catch (error) {
+        window.open(downloadResume.href, "_blank", "noopener,noreferrer");
+    }
+});
 
 contactForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
-    alert("Thank you! Your message has been received.");
+    const formData = new FormData(contactForm);
+    const senderName = formData.get("name");
+    const senderEmail = formData.get("email");
+    const subject = formData.get("subject");
+    const message = formData.get("message");
+    const body = `Name: ${senderName}\nEmail: ${senderEmail}\n\n${message}`;
 
-    contactForm.reset();
+    window.location.href = `mailto:telvinmurimi397@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    alert("Your email app will open with the message ready to send.");
 
 });
 

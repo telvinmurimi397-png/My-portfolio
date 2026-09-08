@@ -73,7 +73,7 @@
 
             <div class="social-icons">
                 <a href="https://www.instagram.com/teffrimie007?igsi=MXh4emFiaGgwanAzdA==" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/teff.konst" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61578352545605" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.tiktok.com/@teffrimie007?_r=1&_t=ZS-99RrmxRcHCy" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
                 <a href="https://x.com/TMurimi96634" aria-label="X" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
                 <a href="https://github.com/" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
@@ -156,7 +156,7 @@
                 <a class="btn" href="https://cdn.phototourl.com/free/2026-09-08-94cb415c-6195-4e12-8502-d5bc491a7f60.jpg" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-eye"></i> View Resume
                 </a>
-                <a class="btn btn-outline" href="https://cdn.phototourl.com/free/2026-09-08-94cb415c-6195-4e12-8502-d5bc491a7f60.jpg" download="Telvin-Resume.jpg">
+                <a class="btn btn-outline" id="downloadResume" href="https://cdn.phototourl.com/free/2026-09-08-94cb415c-6195-4e12-8502-d5bc491a7f60.jpg" download="Telvin-Resume.jpg">
                     <i class="fas fa-download"></i> Download Resume
                 </a>
             </div>
@@ -470,27 +470,31 @@
             </div>
 
 
-            <form id="contactForm">
+            <form id="contactForm" action="mailto:telvinmurimi397@gmail.com" method="post" enctype="text/plain">
 
                 <input
                     type="text"
+                    name="name"
                     placeholder="Your Name"
                     required
                 >
 
                 <input
                     type="email"
+                    name="email"
                     placeholder="Your Email"
                     required
                 >
 
                 <input
                     type="text"
+                    name="subject"
                     placeholder="Subject"
                     required
                 >
 
                 <textarea
+                    name="message"
                     rows="6"
                     placeholder="Your Message"
                     required
@@ -523,7 +527,7 @@
         <div class="social-icons">
 
             <a href="https://www.instagram.com/teffrimie007?igsi=MXh4emFiaGgwanAzdA==" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/teff.konst" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61578352545605" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
             <a href="https://www.tiktok.com/@teffrimie007?_r=1&_t=ZS-99RrmxRcHCy" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
             <a href="https://x.com/TMurimi96634" aria-label="X" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
             <a href="https://github.com/" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
@@ -537,7 +541,7 @@
     </footer>
 
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> 
 
 </body>
 </html>
