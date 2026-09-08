@@ -51,11 +51,11 @@ const modalTools = document.getElementById("modalTools");
 const modalAction = document.getElementById("modalAction");
 
 const projects = {
-    bakery: {
+    colouringGame: {
         type: "SOFTWARE DEVELOPMENT",
-        title: "Bakery Website",
-        description: "A modern responsive bakery website designed to make browsing products and placing an order simple.",
-        tools: "HTML, CSS and Materialize",
+        title: "Colouring Game",
+        description: "An interactive colouring game designed for creative play and built with HTML, CSS and JavaScript.",
+        tools: "HTML, CSS and JavaScript",
         action: "#contact",
         actionText: "Ask about this project"
     },
